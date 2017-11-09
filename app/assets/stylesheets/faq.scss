@@ -1,0 +1,39 @@
+/* faq site */
+
+@import 'colors';
+
+.faqs {
+	max-width: 960px;
+	margin: 0 auto;
+	margin-top: 1em;
+
+	h2 {
+		text-align: center;
+		color: $blue;
+	}
+
+	ul {
+		list-style: disc;
+		padding-left: 1em;
+
+		li {
+			margin: 2em 0;
+			line-height: 1.5em;
+
+			.question {
+				color: $blue;
+				margin-bottom: 0.5em;
+			}
+
+			.answer {
+				color: $grey;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.faqs {
+		padding: 0 2em;
+	}
+}

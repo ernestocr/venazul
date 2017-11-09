@@ -1,0 +1,25 @@
+<%= form_for([:admin, faq]) do |f| %>
+
+	<div class="field">
+		<label class="label">Pregunta</label>
+		<div class="control">
+			<%= f.text_area :question, class: 'textarea', rows: '1' %>
+		</div>
+	</div>
+
+	<div class="field">
+		<label class="label">Respuesta</label>
+		<div class="control">
+			<%= f.text_area :answer, class: 'textarea' %>
+		</div>
+	</div>
+
+	<div class="field">
+		<%= f.submit 'Guardar', class: 'button is-primary is-small' %>
+
+		<% if !faq.question.blank? %>
+			<%= link_to 'Eliminar', admin_faq_path(faq), method: :delete, class: 'button is-danger is-small', data: { confirm: 'Estás seguro?' } %>
+		<% end %>
+	</div>
+
+<% end %>

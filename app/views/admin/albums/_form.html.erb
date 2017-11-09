@@ -1,0 +1,38 @@
+<%= form_for([:admin, album]) do |f| %>
+  <% if album.errors.any? %>
+    <div id="error_explanation" class="notification is-danger">
+      <h2><%= pluralize(album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% album.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, 'Nombre', class: 'label' %>
+    <div class="control">
+      <%= f.text_field :name, class: 'input' %>
+    </div>
+  </div>
+
+  <div class="field">
+   <%= f.label :description, 'Descripción (opcional)', class: 'label' %>
+   <div class="control">
+     <%= f.text_area :description, class: 'input' %>
+   </div>
+  </div>
+  
+  <div class="field">
+     <%= f.label :photos, 'Agregar las fotos', class: 'label' %>
+     <div class="control">
+       <%= f.file_field :photos, multiple: true %>
+     </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Guardar', class: 'button is-primary' %>
+  </div>
+<% end %>

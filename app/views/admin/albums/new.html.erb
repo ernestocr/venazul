@@ -1,0 +1,14 @@
+<h1 class="is-size-4">Agregar nuevo album</h1>
+
+<br>
+
+<div class="columns">
+	<div class="column">
+		<%= render 'admin/albums/form', album: @album %>
+	</div>
+	<div class="column"></div>
+</div>
+
+<hr>
+
+<%= link_to 'Cancelar', admin_albums_path %>

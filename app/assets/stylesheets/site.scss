@@ -1,0 +1,143 @@
+/* site wide styles */
+/* coded by ernestocr.github.io */
+
+@import 'colors';
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Baskerville', 'Georgia', serif;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: lighter;
+	padding: 0;
+	margin: 0;
+	letter-spacing: 0.1em;
+}
+
+.header {
+	background: #fff;
+
+	.top {
+		text-align: center;
+		padding: 2em 0;
+
+		.logo {
+			max-width: 300px;
+			margin: 0 auto;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.nav {
+		display: flex;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-bottom: 2em;
+
+		.item {
+			flex-grow: 1;
+			flex: 1;
+			font-size: 1em;
+			text-transform: uppercase;
+			transition: all .2s;
+			font-weight: normal;
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+
+			a {
+				text-decoration: none;
+				color: $grey;
+
+				&:active {
+					color: $blue;
+				}
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+	} 
+}
+
+footer {
+	background: #fff;
+	padding: 3em 0;
+
+	hr {
+		border: 3px solid $blue;
+		margin: 1em 0;
+	}
+
+	h2 {
+		text-align: center;
+		color: $blue;
+	}
+
+	.info {
+		max-width: 400px;
+		margin: 1em auto;
+		text-align: justify;
+		color: $grey;
+	}
+
+	.social {
+		max-width: 200px;
+		margin: 0 auto;
+		margin-top: 1em;
+
+		ul {
+			display: flex;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				flex: 1;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	.header {
+		.nav {
+			display: flex;
+		    flex-wrap: wrap;
+		    flex-direction: row;
+
+		    .item {
+		    	width: calc(50% - 2rem);
+		    	margin: 1rem;
+		    	text-align: center !important;
+		    }
+		}
+	}
+
+	footer .info {
+		max-width: 100%;
+		padding: 0 2em;
+		text-align: center;
+
+		span {
+			display: block;
+			margin-top: 1em;
+		}
+	}
+}

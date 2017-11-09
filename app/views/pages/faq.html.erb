@@ -1,0 +1,16 @@
+<div class="faqs">
+	<h2>Preguntas frecuentes</h2>
+
+	<% @faqs.each do |faq| %>
+		<ul>
+			<li>
+				<div class="question">
+					<%= faq.question %>
+				</div>
+				<div class="answer">
+					<%= faq.answer %>
+				</div>
+			</li>
+		</ul>
+	<% end %>	
+</div>

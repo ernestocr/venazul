@@ -1,0 +1,13 @@
+<div class="portfolio" id="portafolio">
+	<h2>Portafolio</h2>
+	<div class="albums">
+		<% @albums.each do |album| %>
+			<div class="album">
+				<div class="overlay">
+					<span><%= album.name %></span>
+				</div>
+				<%= image_tag album.photos.first.thumb %>
+			</div>
+		<% end %>		
+	</div>
+</div>

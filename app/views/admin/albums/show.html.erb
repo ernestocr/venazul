@@ -1,0 +1,19 @@
+<h1 class="is-size-4"><%= @album.name %></h1>
+
+<p>Creado el: <b><%= @album.created_at_f %></b></p>
+<p><%= @album.description %></p>
+<br>
+<p>
+	<%= link_to 'Editar', edit_admin_album_path(@album), class: 'button is-warning' %>
+	<%= link_to 'Eliminar', admin_album_path(@album), method: :delete, data: { confirm: 'Estás seguro?' }, class: 'button is-danger' %>
+</p>
+
+<hr>
+
+<div class="photos columns is-multiline">
+	<% @album.photos.each do |photo| %>
+		<div class="photo column is-one-quarter">
+			<%= image_tag photo.thumb %>
+		</div>
+	<% end %>
+</div>

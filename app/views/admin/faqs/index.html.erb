@@ -1,0 +1,25 @@
+<h1 class="is-size-4">Preguntas frecuentes</h1>
+
+<br>
+
+<div class="columns">
+	<div class="column">
+		<p>Listado de preguntas</p>
+		<br>
+		<% if @faqs.count == 0 %>
+			<div class="notification is-default">
+				No tienes ninguna pregunta/respuesta, agrega unas cuantas...
+			</div>
+		<% end %>
+		<% @faqs.each do |faq| %>
+			<%= render 'admin/faqs/form', faq: faq %>
+			<hr>
+		<% end %>
+	</div>
+	<div class="column">
+		<p>Agrega una pregunta/respuesta nueva</p>
+		<br>
+
+		<%= render 'admin/faqs/form', faq: Faq.new %>	
+	</div>
+</div>
