@@ -117,14 +117,15 @@ footer {
 
 @media (max-width: 600px) {
 	.header {
-		.nav {
-			display: flex;
-		    flex-wrap: wrap;
-		    flex-direction: row;
+    .top {
+      padding: 0;
+    }
 
-		    .item {
-		    	width: calc(50% - 2rem);
-		    	margin: 1rem;
+		.nav {
+		  display: block;  
+      .item {
+          margin-bottom: 0.5em;
+		    	display: block;
 		    	text-align: center !important;
 		    }
 		}
