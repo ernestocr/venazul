@@ -14,5 +14,6 @@
  *= require site
  *= require home
  *= require faq
+ *= require swipebox
  *= require_self
  */
