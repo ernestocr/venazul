@@ -15,8 +15,10 @@
     </div>
     <div class="container">
       <% if flash[:notice] %>
+        <br>
         <p class="notification is-warning" id="notice"><%= flash[:notice] %></p>
       <% elsif flash[:alert] %>
+        <br>
         <p class="notification is-danger" id="alert"><%= flash[:alert] %></p>
       <% end %>
 

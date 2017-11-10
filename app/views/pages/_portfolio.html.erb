@@ -23,15 +23,15 @@
 			var name = $(this).data('name')
 			var gallery_id = $(this).data('gallery');
 			var data = $('#' + gallery_id).val();
-			data = JSON.parse(data);
-			
+      data = JSON.parse(data);
+
 			var gallery = [];
 			data.forEach(function(image) {
 				gallery.push({
-					href: image.url,
+					href: image.view.url,
 					title: name
 				})
-			});
+      });
 			$.swipebox(gallery);
 		});
 	});
