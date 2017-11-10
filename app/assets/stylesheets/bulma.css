@@ -10661,3 +10661,10 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 /*# sourceMappingURL=bulma.css.map */
+
+@media (max-width: 700px) {
+  .table-container {
+    max-width: 100%;
+    overflow: scroll;
+  }
+}

@@ -12,17 +12,17 @@
   <body>
     <div class="container is-fluid">
       <%= render 'layouts/admin_nav' %>
-      <br>
-
+    </div>
+    <div class="container">
       <% if flash[:notice] %>
         <p class="notification is-warning" id="notice"><%= flash[:notice] %></p>
-        <br>
       <% elsif flash[:alert] %>
         <p class="notification is-danger" id="alert"><%= flash[:alert] %></p>
-        <br>
       <% end %>
 
-      <%= yield %>
+      <div class="section">
+        <%= yield %>
+      </div>
     </div>
     <br>
     <br>
